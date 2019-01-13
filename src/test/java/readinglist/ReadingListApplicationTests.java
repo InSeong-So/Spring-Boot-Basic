@@ -1,4 +1,4 @@
-package SpringBootBasic;
+package readinglist;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringBootBasicApplicationTests {
+public class ReadingListApplicationTests {
 
 	@Test
 	public void contextLoads() {
