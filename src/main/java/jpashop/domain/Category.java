@@ -14,6 +14,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import jpashop.domain.item.Item;
+
 @Entity
 public class Category
 {
@@ -35,10 +37,16 @@ public class Category
     @OneToMany(mappedBy = "parent")
     private List<Category> child = new ArrayList<Category>();
     
+    //==연관관계 메서드==//
     public void addChildCategory(Category child)
     {
         this.child.add(child);
         child.setParent(this);
+    }
+    
+    public void addItem(Item item)
+    {
+        items.add(item);
     }
     
     public Long getId()
@@ -91,4 +99,9 @@ public class Category
         this.child = child;
     }
     
+    @Override
+    public String toString()
+    {
+        return "Category{" + "id=" + id + ", name='" + name + '\'' + '}';
+    }
 }

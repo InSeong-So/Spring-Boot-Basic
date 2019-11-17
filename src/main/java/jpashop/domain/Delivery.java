@@ -24,7 +24,17 @@ public class Delivery
     private Address address;
     
     @Enumerated(EnumType.STRING)
-    private DeliveryStatus status;
+    private DeliveryStatus status; //ENUM [READY(준비), COMP(배송)]
+    
+    public Delivery()
+    {
+    }
+    
+    public Delivery(Address address)
+    {
+        this.address = address;
+        this.status = DeliveryStatus.READY;
+    }
     
     public Long getId()
     {
@@ -66,4 +76,9 @@ public class Delivery
         this.status = status;
     }
     
+    @Override
+    public String toString()
+    {
+        return "Delivery{" + "id=" + id + ", address=" + address + ", status=" + status + '}';
+    }
 }

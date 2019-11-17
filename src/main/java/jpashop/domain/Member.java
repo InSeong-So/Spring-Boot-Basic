@@ -10,11 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import org.apache.tomcat.jni.Address;
-
 @Entity
 public class Member
 {
+    
     @Id
     @GeneratedValue
     @Column(name = "MEMBER_ID")
@@ -68,4 +67,9 @@ public class Member
         this.orders = orders;
     }
     
+    @Override
+    public String toString()
+    {
+        return "Member{" + "id=" + id + ", name='" + name + '\'' + ", address=" + address + '}';
+    }
 }

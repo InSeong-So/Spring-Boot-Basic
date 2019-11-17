@@ -3,12 +3,11 @@ package jpashop.domain.item;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-import jpashop.domain.Item;
-
 @Entity
 @DiscriminatorValue("B")
 public class Book extends Item
 {
+    
     private String author;
     
     private String isbn;
@@ -33,4 +32,9 @@ public class Book extends Item
         this.isbn = isbn;
     }
     
+    @Override
+    public String toString()
+    {
+        return "Book{}";
+    }
 }

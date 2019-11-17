@@ -3,8 +3,6 @@ package jpashop.domain.item;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-import jpashop.domain.Item;
-
 @Entity
 @DiscriminatorValue("A")
 public class Album extends Item
